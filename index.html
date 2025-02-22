@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <h1>GUESS THE NUMBER</h1>
+    <div class="init" id="init">
+      <div class="app-one" id="app-one">
+        <p>
+          The application will generate a random number, and your task is to
+          find it in as few attempts as possible.
+        </p>
+        <button id="start" class="start">Start</button>
+      </div>
+      <div class="app-two" id="app-two">
+        <p id="try" class="try">
+          I generate a number between 0 to 500. Try to find it 🔥
+        </p>
+        <p class="score" id="score"></p>
+        <form id="mainForm" class="mainForm">
+          <div class="guess">
+            <p>Your Guess</p>
+            <input
+              type="text"
+              class="userInput"
+              id="input"
+              placeholder="50"
+              name="answer"
+            /><button id="submitBtn" class="submit">Submit</button>
+            <p style="color: #64748b">Enter your guessing number...</p>
+          </div>
+        </form>
+        <p class="hint" id="hintText"></p>
+        <div class="readonly" id="progressBar"></div>
+        <div class="betweenNumber">
+          <p>0</p>
+          <p>500</p>
+        </div>
+        <div class="resetContainer">
+          <button class="resetGame" id="resetBtn">Replay</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
